@@ -1,8 +1,9 @@
 <script setup lang='ts'>
 import { Tab, TabsContent, TabsWrapper } from "./components/VueTailwindOutlineTabs";
 import { ref } from "vue";
+import { Icon } from "@iconify/vue";
 type Tab = string;
-const activeTab = ref("orders");
+const activeTab = ref("vue");
 const clickTab = (name: Tab) => {
   activeTab.value = name;
 }
@@ -12,77 +13,47 @@ const clickTab = (name: Tab) => {
   <main class="grid place-items-center w-full min-h-screen">
     <section>
       <TabsWrapper>
-        <Tab activeTitleColor="text-purple-500" title="Orders" :isActive="activeTab === 'orders'" @onClick="clickTab('orders')">
+        <Tab activeTitleColor="text-green-500" barColor="border-green-500" title="Vue" :isActive="activeTab === 'vue'"
+          @onClick="clickTab('vue')">
           <template #icon>
-            <svg :class="{'text-purple-500': activeTab === 'orders'}"
-                 class="font-medium text-gray-400 w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
-                 viewBox="0 0 24 24"
-                 stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
-            </svg>
+            <Icon icon="logos:vue" :class="{ 'text-green-500': activeTab === 'vue' }"
+              class="text-xl font-medium w-6 h-6 mr-2" />
           </template>
         </Tab>
-        <Tab activeTitleColor="text-purple-500" title="Active" :isActive="activeTab === 'active'" @onClick="clickTab('active')">
+        <Tab activeTitleColor="text-green-500" barColor="border-green-500" title="Vueuse"
+          :isActive="activeTab === 'vueuse'" @onClick="clickTab('vueuse')">
           <template #icon>
-            <svg :class="{'text-purple-500': activeTab === 'active'}"
-                 class="font-medium text-gray-400 w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
-                 viewBox="0 0 24 24"
-                 stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
+            <Icon icon="logos:vueuse" :class="{ 'text-green-500': activeTab === 'vueuse' }"
+              class="text-xl font-medium w-6 h-6 mr-2" />
           </template>
         </Tab>
-        <Tab activeTitleColor="text-purple-500" title="To invoice" :isActive="activeTab === 'toInvoice'" @onClick="clickTab('toInvoice')">
+        <Tab activeTitleColor="text-green-500" barColor="border-green-500" title="Nuxt" :isActive="activeTab === 'nuxt'"
+          @onClick="clickTab('nuxt')">
           <template #icon>
-            <svg :class="{'text-purple-500': activeTab === 'toInvoice'}"
-                 class="font-medium text-gray-400 w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
-                 viewBox="0 0 24 24"
-                 stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-            </svg>
+            <Icon icon="logos:nuxt-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
+              class="text-xl font-medium w-6 h-6 mr-2" />
           </template>
         </Tab>
-        <Tab activeTitleColor="text-purple-500" title="Spinner" :isActive="activeTab === 'toInvoice'" @onClick="clickTab('toInvoice')">
+        <Tab activeTitleColor="text-green-500" barColor="border-green-500" title="Gridsome"
+          :isActive="activeTab === 'gridsome'" @onClick="clickTab('gridsome')">
           <template #icon>
-            <svg :class="{'text-purple-500': activeTab === 'toInvoice'}"
-                 class="font-medium text-gray-400 w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
-                 viewBox="0 0 24 24"
-                 stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-            </svg>
+            <Icon icon="logos:gridsome-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
+              class="text-xl font-medium w-6 h-6 mr-2" />
           </template>
         </Tab>
       </TabsWrapper>
       <TabsContent>
-        <div v-if="activeTab === 'orders'">
-          Aspernatur cupiditate, dolorum earum eius ex facilis
-          illum maiores nihil optio placeat, quam quos repellendus suscipit tempora, voluptate! Alias asperiores
-          assumenda beatae commodi dolorum, laudantium libero molestiae nam officiis praesentium quisquam soluta totam,
-          veritatis. A, adipisci error ex illum iusto unde. A animi assumenda at, dolorem ducimus enim error incidunt,
-          ipsam iure magnam nobis omnis quae quasi quod recusandae, reiciendis rerum sequi. Alias animi consequuntur
-          delectus distinctio enim, et expedita ipsam itaque labore neque nobis numquam obcaecati, officia perferendis
-          possimus provident quaerat qui, quibusdam quis quos ratione recusandae repellat reprehenderit sit voluptate!
+        <div v-if="activeTab === 'vue'">
+          Vue is a framework. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos dolorum fugiat sapiente eum nihil accusantium mollitia cum placeat est ipsa error, neque maiores numquam accusamus odit nostrum quisquam eveniet quas.
         </div>
-        <div v-if="activeTab === 'active'">
-          Aspernatur cupiditate, dolorum earum eius ex facilis
-          illum maiores nihil optio placeat, quam quos repellendus suscipit tempora, voluptate! Alias asperiores
-          assumenda beatae commodi dolorum, laudantium libero molestiae nam officiis praesentium quisquam soluta totam,
-          veritatis. A, adipisci error ex illum iusto unde. A animi assumenda at, dolorem ducimus enim error incidunt,
-          ipsam iure magnam nobis omnis quae quasi quod recusandae, reiciendis rerum sequi. Alias animi consequuntur
-          delectus distinctio enim, et expedita ipsam itaque labore neque nobis numquam obcaecati, officia perferendis
-          possimus provident quaerat qui, quibusdam quis quos ratione recusandae repellat reprehenderit sit voluptate!
+        <div v-if="activeTab === 'vueuse'">
+          VueUse is a collection of utility functions based on Composition API. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias perferendis ut labore unde quidem placeat amet similique blanditiis facilis maiores.
         </div>
-        <div v-if="activeTab === 'toInvoice'">
-          Aspernatur cupiditate, dolorum earum eius ex facilis
-          illum maiores nihil optio placeat, quam quos repellendus suscipit tempora, voluptate! Alias asperiores
-          assumenda beatae commodi dolorum, laudantium libero molestiae nam officiis praesentium quisquam soluta totam,
-          veritatis. A, adipisci error ex illum iusto unde. A animi assumenda at, dolorem ducimus enim error incidunt,
-          ipsam iure magnam nobis omnis quae quasi quod recusandae, reiciendis rerum sequi. Alias animi consequuntur
-          delectus distinctio enim, et expedita ipsam itaque labore neque nobis numquam obcaecati, officia perferendis
-          possimus provident quaerat qui, quibusdam quis quos ratione recusandae repellat reprehenderit sit voluptate!
+        <div v-if="activeTab === 'nuxt'">
+          Nuxt is a free and open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, porro!
+        </div>
+        <div v-if="activeTab === 'gridsome'">
+          Gridsome is a Vue.js powered Jamstack framework for building static generated websites & apps that are fast by default 🚀. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium asperiores unde tenetur esse debitis dolor vel error nostrum exercitationem accusamus!
         </div>
       </TabsContent>
     </section>

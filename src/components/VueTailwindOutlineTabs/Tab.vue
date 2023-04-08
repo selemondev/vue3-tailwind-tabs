@@ -15,7 +15,7 @@ const props = withDefaults(defineProps<Props>(), {
         <li @click="$emit('onClick')" class="cursor-pointer max-w-xl flex items-center space-x-1">
             <slot name="icon"></slot>
             <div class="py-2 w-20 sm:w-auto">
-                <span :class="[props.isActive ? props.activeTitleColor : 'text-black']">{{ title }}</span>
+                <span :class="[props.isActive ? `${props.activeTitleColor} font-bold` : 'text-black']">{{ title }}</span>
             </div>
         </li>
         <div class="w-full h-1">
