@@ -24,7 +24,7 @@ const clickTab = (name: Tab) => {
 
 <div class="grid place-items-center w-full">
   <main class="mt-6 space-y-10 ">
-    <section class="px-4">
+    <section>
     <TabGroupOutline>
       <TabsWrapperOutline>
         <TabOutline activeTitleColor="text-green-500" barColor="border-green-500" title="Vue" :isActive="activeTab === 'vue'"
@@ -73,31 +73,31 @@ const clickTab = (name: Tab) => {
     </TabGroupOutline>
     </section>
 
-    <section class="px-4">
+    <section class="">
     <TabFloatGroup>
       <TabsFloatWrapper>
-        <TabFloat floatActiveTitleColor="text-green-500" floatBarColor="border-green-500" floatTitle="Vue" :floatIsActive="activeTab === 'vue'"
+        <TabFloat floatActiveTitleColor="text-green-500" floatTitle="Vue" :floatIsActive="activeTab === 'vue'"
           @onClick="clickTab('vue')">
           <template #icon>
             <Icon icon="logos:vue" :class="{ 'text-green-500': activeTab === 'vue' }"
               class="text-xl font-medium w-6 h-6 mr-2" />
           </template>
         </TabFloat>
-        <TabFloat floatActiveTitleColor="text-green-500" floatBarColor="border-green-500" floatTitle="vueuse"
+        <TabFloat floatActiveTitleColor="text-green-500" floatTitle="Vueuse"
           :floatIsActive="activeTab === 'vueuse'" @onClick="clickTab('vueuse')">
           <template #icon>
             <Icon icon="logos:vueuse" :class="{ 'text-green-500': activeTab === 'vueuse' }"
               class="text-xl font-medium w-6 h-6 mr-2" />
           </template>
         </TabFloat>
-        <TabFloat floatActiveTitleColor="text-green-500" floatBarColor="border-green-500" floatTitle="Nuxt" :floatIsActive="activeTab === 'nuxt'"
+        <TabFloat floatActiveTitleColor="text-green-500" floatTitle="Nuxt" :floatIsActive="activeTab === 'nuxt'"
           @onClick="clickTab('nuxt')">
           <template #icon>
             <Icon icon="logos:nuxt-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
               class="text-xl font-medium w-6 h-6 mr-2" />
           </template>
         </TabFloat>
-        <TabFloat floatActiveTitleColor="text-green-500" floatBarColor="border-green-500" floatTitle="Gridsome"
+        <TabFloat floatActiveTitleColor="text-green-500" floatTitle="Gridsome"
           :floatIsActive="activeTab === 'gridsome'" @onClick="clickTab('gridsome')">
           <template #icon>
             <Icon icon="logos:gridsome-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"

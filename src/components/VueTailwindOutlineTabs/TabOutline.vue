@@ -15,12 +15,12 @@ const props = withDefaults(defineProps<Props>(), {
         <li @click="$emit('onClick')" class="cursor-pointer flex items-center space-x-1">
             <slot name="icon"></slot>
             <div class="py-2 w-20 sm:w-auto">
-                <span :class="[props.isActive ? `${props.activeTitleColor} font-bold` : 'text-black dark:text-white']">{{ title }}</span>
+                <span :class="[props.isActive ? `${props.activeTitleColor} font-bold` : 'text-black dark:text-white']">{{ props.title }}</span>
             </div>
         </li>
         <div class="w-full h-1">
             <Transition name="slide-fade">
-                <div v-if="isActive" class="relative flex flex-row">
+                <div v-if="props.isActive" class="relative flex flex-row">
                     <span :class="[props.barColor ? `border-2 ${props.barColor} w-full` : 'border-2 border-purple-500 w-full']"></span>
                 </div>
             </Transition>

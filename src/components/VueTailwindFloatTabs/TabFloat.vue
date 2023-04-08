@@ -6,28 +6,27 @@ export interface Props {
     floatBarColor?: string
 }
 const props = withDefaults(defineProps<Props>(), {
-    floatActiveTitleColor: 'text-purple-500'
+    floatActiveTitleColor: 'text-purple-500',
+    floatBarColor: 'bg-gray-400/30 dark:bg-gray-500/30'
 });
 </script>
 
 <template>
-    <div>
-        <Transition name="slide-fade">
-            <div :class="[props.floatIsActive ? 'bg-gray-200 rounded-md px-4 py-1' : 'bg-transparent']">
-                <div class="px-2">
-                    <li @click="$emit('onClick')"
-                        class="cursor-pointer rounded-lg flex justify-center items-center px-3  space-x-1">
-                        <slot name="icon"></slot>
-                        <div class="py-2 w-20 sm:w-auto">
-                            <span
-                                :class="[props.floatIsActive ? `${props.floatActiveTitleColor} font-bold` : 'text-black dark:text-white']">{{
-                                    floatTitle }}</span>
-                        </div>
-                    </li>
-                </div>
+<div class="relative z-20 mx-2">
+    <div class="px-4">
+        <li @click="$emit('onClick')" class="cursor-pointer h-12 rounded-lg flex justify-center items-center px-4 space-x-1">
+            <slot name="icon"></slot>
+            <div class="py-2 w-12 sm:w-auto">
+                <span :class="[props.floatIsActive ? `${props.floatActiveTitleColor} font-bold` : 'text-black dark:text-white']">{{ props.floatTitle }}</span>
             </div>
-        </Transition>
+        </li>
+        <div>
+            <Transition name="slide-fade">
+                <div v-if="props.floatIsActive" :class="[props.floatBarColor || '']" class="absolute rounded-md inset-0 w-full -z-10"></div>
+            </Transition>
+        </div>
     </div>
+</div>
 </template>
 <style scoped>
 .slide-fade-enter-active {
@@ -37,4 +36,5 @@ const props = withDefaults(defineProps<Props>(), {
 .slide-fade-enter-from {
     transform: translateX(-40px);
     opacity: 0;
-}</style>
+}
+</style>
