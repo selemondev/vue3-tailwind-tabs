@@ -1,24 +1,19 @@
 <script setup lang='ts'>
-import { Tab, TabsContent, TabsWrapper } from "./components/VueTailwindTabs";
+import { Tab, TabsContent, TabsWrapper } from "./components/VueTailwindOutlineTabs";
 import { ref } from "vue";
 type Tab = string;
 const activeTab = ref("orders");
-const emit = defineEmits<{
-  (e: 'onClick'): void
-}>();
-
 const clickTab = (name: Tab) => {
-  emit('onClick')
   activeTab.value = name;
 }
 </script>
 
 <template>
-  <main class="grid place-items-center w-full min-h-screen bg-white">
+  <main class="grid place-items-center w-full min-h-screen">
     <section>
       <TabsWrapper>
-        <Tab activeTitleColor="text-purple-500" title="Orders" :isActive="activeTab === 'orders'" @click="clickTab('orders')">
-          <template v-slot:icon>
+        <Tab activeTitleColor="text-purple-500" title="Orders" :isActive="activeTab === 'orders'" @onClick="clickTab('orders')">
+          <template #icon>
             <svg :class="{'text-purple-500': activeTab === 'orders'}"
                  class="font-medium text-gray-400 w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
                  viewBox="0 0 24 24"
@@ -28,9 +23,9 @@ const clickTab = (name: Tab) => {
             </svg>
           </template>
         </Tab>
-        <Tab activeTitleColor="text-purple-500" title="Active" :isActive="activeTab === 'active'" @click="clickTab('active')">
-          <template v-slot:icon>
-            <svg :class="{'text-indigo-700': activeTab === 'active'}"
+        <Tab activeTitleColor="text-purple-500" title="Active" :isActive="activeTab === 'active'" @onClick="clickTab('active')">
+          <template #icon>
+            <svg :class="{'text-purple-500': activeTab === 'active'}"
                  class="font-medium text-gray-400 w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
                  viewBox="0 0 24 24"
                  stroke="currentColor">
@@ -38,9 +33,20 @@ const clickTab = (name: Tab) => {
             </svg>
           </template>
         </Tab>
-        <Tab activeTitleColor="text-purple-500" title="To invoice" :isActive="activeTab === 'toInvoice'" @click="clickTab('toInvoice')">
-          <template v-slot:icon>
-            <svg :class="{'text-indigo-700': activeTab === 'toInvoice'}"
+        <Tab activeTitleColor="text-purple-500" title="To invoice" :isActive="activeTab === 'toInvoice'" @onClick="clickTab('toInvoice')">
+          <template #icon>
+            <svg :class="{'text-purple-500': activeTab === 'toInvoice'}"
+                 class="font-medium text-gray-400 w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </template>
+        </Tab>
+        <Tab activeTitleColor="text-purple-500" title="Spinner" :isActive="activeTab === 'toInvoice'" @onClick="clickTab('toInvoice')">
+          <template #icon>
+            <svg :class="{'text-purple-500': activeTab === 'toInvoice'}"
                  class="font-medium text-gray-400 w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
                  viewBox="0 0 24 24"
                  stroke="currentColor">
