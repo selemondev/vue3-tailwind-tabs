@@ -9,7 +9,7 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-    <section class="bg-white rounded-md border border-gray-500 max-w-xl p-2">
+    <section class="rounded-md bg-gray-100 max-w-3xl p-2">
         <div :class="props.textColor">
             <slot/>
         </div>
