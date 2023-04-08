@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 export interface Props {
-    textColor: string
+    textColor?: string
 };
 
 const props = withDefaults(defineProps<Props>(), {
@@ -9,9 +9,9 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-    <div class="bg-white rounded-md">
+    <section class="bg-white rounded-md border border-gray-500 max-w-xl p-2">
         <div :class="props.textColor">
             <slot/>
         </div>
-    </div>
+    </section>
 </template>
