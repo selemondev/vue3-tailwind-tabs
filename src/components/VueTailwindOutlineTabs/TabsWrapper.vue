@@ -1,17 +1,24 @@
+<script lang="ts" setup>
+const props = withDefaults(defineProps<{
+  TabWrapperWidth?: number | string
+}>(), {
+  TabWrapperWidth: '[768px]'
+});
+</script>
 <template>
-    <div class="grid place-items-center sm:hidden">
+    <section class="grid place-items-center sm:hidden">
       <div class="w-72 scrollbar-hide overflow-auto">
         <ul class="flex justify-between items-center w-full">
           <slot />
         </ul>
       </div>
-    </div>
-    <div>
-      <div class="hidden w-72 overflow-auto sm:flex sm:w-[768px]">
+    </section>
+    <section>
+      <div :class="[props.TabWrapperWidth ? `hidden scrollbar-hide overflow-auto sm:flex sm:w-${props.TabWrapperWidth}` : 'sm:w-full sm:overflow-auto']">
         <ul class="flex justify-between items-center sm:w-full sm:flex sm:justify-between sm:items-center">
           <slot />
         </ul>
       </div>
-    </div>
+    </section>
   </template>
   
