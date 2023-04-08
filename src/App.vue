@@ -1,7 +1,10 @@
 <script setup lang='ts'>
-import { Tab, TabsContent, TabsWrapper } from "./components/VueTailwindOutlineTabs";
+import { Tab, TabsContent, TabsWrapper, TabGroup } from "./components/VueTailwindOutlineTabs";
 import { ref } from "vue";
 import { Icon } from "@iconify/vue";
+import { useDark, useToggle } from '@vueuse/core'
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
 type Tab = string;
 const activeTab = ref("vue");
 const clickTab = (name: Tab) => {
@@ -10,8 +13,17 @@ const clickTab = (name: Tab) => {
 </script>
 
 <template>
-  <main class="grid place-items-center w-full min-h-screen">
-    <section>
+<div class="w-full min-h-screen bg-white dark:bg-black">
+  <header>
+  <div class="flex justify-end p-6">
+    <Icon v-if="isDark" icon="ph:sun" @click="toggleDark()" class="text-xl dark:text-white"/>
+    <Icon v-else icon="ph:moon" @click="toggleDark()" class="text-xl"/>
+  </div>
+ </header>
+
+<main class="flex justify-center mt-6 w-full min-h-screen ">
+    <section class="px-4">
+    <TabGroup>
       <TabsWrapper>
         <Tab activeTitleColor="text-green-500" barColor="border-green-500" title="Vue" :isActive="activeTab === 'vue'"
           @onClick="clickTab('vue')">
@@ -44,18 +56,20 @@ const clickTab = (name: Tab) => {
       </TabsWrapper>
       <TabsContent>
         <div v-if="activeTab === 'vue'">
-          Vue is a framework. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos dolorum fugiat sapiente eum nihil accusantium mollitia cum placeat est ipsa error, neque maiores numquam accusamus odit nostrum quisquam eveniet quas.
+          Vue is a framework. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error assumenda, maiores recusandae sunt neque ab officia consectetur officiis nesciunt sapiente adipisci. Sapiente, exercitationem impedit. Eum fuga amet commodi, voluptatibus ab expedita aliquam ipsa minima sit! Voluptatum eveniet provident fuga velit suscipit cupiditate sed laboriosam libero corrupti id cum, nesciunt tenetur alias ullam itaque minima reiciendis maiores! Fuga omnis voluptate nam quasi adipisci iste consequatur facilis, officia exercitationem libero accusamus saepe, id ratione alias quos? Eaque eum, cum deserunt corporis ipsa, modi fuga incidunt reiciendis recusandae delectus illo a nobis dolorum repellendus aspernatur nesciunt eligendi, dicta consectetur labore obcaecati? Debitis, velit.
         </div>
         <div v-if="activeTab === 'vueuse'">
-          VueUse is a collection of utility functions based on Composition API. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias perferendis ut labore unde quidem placeat amet similique blanditiis facilis maiores.
+          VueUse is a collection of utility functions based on Composition API.  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam ad provident optio hic error odio dolorum nisi neque, nemo amet quam a repellat itaque! Esse eveniet repellat fugit soluta, commodi molestiae iure? Maxime beatae, illum enim perferendis nobis quae architecto corporis itaque recusandae eaque minus! Quisquam eaque ratione ex aut voluptas id ullam est rerum cumque, obcaecati qui sunt perferendis reprehenderit quia illo ut architecto esse minus ipsum excepturi iste nulla maiores recusandae? Voluptas nemo necessitatibus neque pariatur iusto saepe natus quod corporis. Deleniti voluptate sunt aliquam veniam quisquam, inventore numquam quidem! Qui, modi cupiditate? Dignissimos eveniet expedita accusamus itaque!
         </div>
         <div v-if="activeTab === 'nuxt'">
-          Nuxt is a free and open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, porro!
+          Nuxt is a free and open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia quasi earum doloribus asperiores suscipit exercitationem cupiditate eligendi, esse sit optio itaque illum nesciunt nemo eius repudiandae sapiente dolor dolores veniam! Aspernatur sint non ad in laborum consectetur quas eligendi molestias voluptates blanditiis eveniet illum soluta voluptate pariatur nihil magnam dolorum perspiciatis id beatae recusandae enim, obcaecati placeat! Tenetur consequatur, ipsa porro ab in veritatis placeat officiis! Et minima repudiandae vel? Vero ad nam asperiores pariatur rem consequatur. Asperiores nihil ducimus impedit, exercitationem, autem vero, beatae tenet.
         </div>
         <div v-if="activeTab === 'gridsome'">
-          Gridsome is a Vue.js powered Jamstack framework for building static generated websites & apps that are fast by default 🚀. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium asperiores unde tenetur esse debitis dolor vel error nostrum exercitationem accusamus!
+          Gridsome is a Vue.js powered Jamstack framework for building static generated websites & apps that are fast by default 🚀. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio ducimus illum deleniti sint nobis alias sit velit. Ipsa voluptas at harum debitis. Commodi quo cupiditate voluptate, quos aperiam accusantium, minima consequatur id odio asperiores quas saepe nulla quisquam inventore, reiciendis eligendi dolores voluptas delectus ea autem ut nam corrupti consequuntur possimus! Veritatis, accusamus! Veniam, incidunt ad. Illo, voluptate voluptatem corrupti tenetur dolore alias rem ut maxime amet porro est explicabo nostrum consectetur non ex odit, in, illum atque deserunt expedita fugiat praesentium sunt. Quo reiciendis sequi error laboriosam voluptatem. Nemo aliquam autem delectus incidunt, vitae itaque cupiditate doloribus.
         </div>
       </TabsContent>
+    </TabGroup>
     </section>
   </main>
+</div>
 </template>
