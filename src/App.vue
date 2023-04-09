@@ -3,9 +3,6 @@ import { TabOutline, TabsContentOutline, TabsWrapperOutline, TabGroupOutline } f
 import { TabFloatGroup, TabsFloatContent, TabsFloatWrapper, TabFloat } from "./components/VueTailwindFloatTabs";
 import { ref } from "vue";
 import { Icon } from "@iconify/vue";
-import { useDark, useToggle } from '@vueuse/core'
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
 type Tab = string;
 const activeTab = ref("vue");
 const clickTab = (name: Tab) => {
@@ -14,14 +11,7 @@ const clickTab = (name: Tab) => {
 </script>
 
 <template>
-<div class="w-full min-h-screen bg-white dark:bg-black">
-  <header>
-  <div class="flex justify-end p-6">
-    <Icon v-if="isDark" icon="ph:sun" @click="toggleDark()" class="text-xl dark:text-white"/>
-    <Icon v-else icon="ph:moon" @click="toggleDark()" class="text-xl"/>
-  </div>
- </header>
-
+<div class="w-full min-h-screen bg-white">
 <div class="grid place-items-center w-full">
   <main class="mt-6 space-y-10 ">
     <section>
@@ -73,7 +63,7 @@ const clickTab = (name: Tab) => {
     </TabGroupOutline>
     </section>
 
-    <section class="">
+    <section>
     <TabFloatGroup>
       <TabsFloatWrapper>
         <TabFloat floatActiveTitleColor="text-green-500" floatTitle="Vue" :floatIsActive="activeTab === 'vue'"
