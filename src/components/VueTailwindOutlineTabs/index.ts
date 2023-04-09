@@ -1,10 +1,10 @@
+import TabGroupOutline from "./TabGroupOutline.vue";
 import TabOutline from "./TabOutline.vue";
 import TabsContentOutline from "./TabsContentOutline.vue";
 import TabsWrapperOutline from "./TabsWrapperOutline.vue";
-import TabGroupOutline from "./TabGroupOutline.vue";
 export {
+    TabGroupOutline,
     TabOutline,
     TabsContentOutline,
-    TabsWrapperOutline,
-    TabGroupOutline
+    TabsWrapperOutline
 }
