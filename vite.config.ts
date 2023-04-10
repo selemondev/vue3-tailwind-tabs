@@ -27,13 +27,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
-      "vue3-tailwind-tabs/outline": fileURLToPath(
-        new URL("./dist/components/VueTailwindOutlineTabs", import.meta.url)
-      ),
-      "vue3-tailwind-tabs/float": fileURLToPath(
-        new URL("./dist/components/VueTailwindFloatTabs", import.meta.url)
-      ),
+      "@": fileURLToPath(new URL("./src", import.meta.url))
     },
   },
 });
