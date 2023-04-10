@@ -150,6 +150,8 @@ const clickTab = (name: Tab) => {
 </div>
 </template>
 ```
+You can choose to use the `TabOutline` components, `TabFloat` components or use both of them together as shown in the example above.
+
 For the icons you can choose to use an `SVG` or install `iconify/vue` to use over 100K+ icons from [Iconify](https://iconify.design). For the example above I have used the `iconify/vue` package for displaying the icons.
 
 You can install `iconify/vue` using the following command: 
