@@ -1,7 +1,7 @@
 {
   "name": "vue3-tailwind-tabs",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A collection of Vue 3 components for creating tabs with Tailwind CSS.",
   "author": "Selemon Brahanu",
   "keywords": [
@@ -10,6 +10,9 @@
     "typescript",
     "tabs",
     "components"
+  ],
+  "files": [
+    "dist"
   ],
   "type": "module",
   "license": "MIT",
@@ -40,7 +43,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "rollup-plugin-typescript2": "^0.34.1",
     "tailwind-scrollbar-hide": "^1.1.7",
     "vue": "^3.2.47"
   },
