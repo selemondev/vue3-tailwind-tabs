@@ -34,8 +34,8 @@ or you can import the components in the component where they are required and us
 
 ```ts
 <script setup lang='ts'>
-import { TabOutline, TabsContentOutline, TabsWrapperOutline, TabGroupOutline } from "./components/VueTailwindOutlineTabs";
-import { TabFloatGroup, TabsFloatContent, TabsFloatWrapper, TabFloat } from "./components/VueTailwindFloatTabs";
+import { TabOutline, TabsContentOutline, TabsWrapperOutline, TabGroupOutline } from "vue3-tailwind-tabs";
+import { TabFloatGroup, TabsFloatContent, TabsFloatWrapper, TabFloat } from "vue3-tailwind-tabs";
 import { ref } from "vue";
 import { Icon } from "@iconify/vue";
 type Tab = string;
