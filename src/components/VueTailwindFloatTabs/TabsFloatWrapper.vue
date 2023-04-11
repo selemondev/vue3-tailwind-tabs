@@ -1,9 +1,7 @@
 <script lang="ts" setup>
 const props = withDefaults(defineProps<{
-  TabFloatWrapperWidth?: number | string,
   TabFloatBackgroundColor?: string
 }>(), {
-  TabFloatWrapperWidth: '[768px]',
   TabFloatBackgroundColor: 'bg-gray-200 dark:bg-gray-600/40'
 });
 </script>
@@ -16,7 +14,7 @@ const props = withDefaults(defineProps<{
       </div>
     </section>
     <section>
-      <div :class="[props.TabFloatWrapperWidth ? `hidden scrollbar-hide overflow-auto rounded-md ${props.TabFloatBackgroundColor} sm:flex sm:w-${props.TabFloatWrapperWidth}` : `sm:w-full sm:overflow-auto rounded-md ${props.TabFloatBackgroundColor}`]" class='py-4'>
+      <div :class="`hidden scrollbar-hide overflow-auto rounded-md ${props.TabFloatBackgroundColor} sm:flex sm:w-full py-4`">
         <ul class="flex justify-between items-center sm:w-full sm:flex sm:justify-between sm:items-center">
           <slot />
         </ul>

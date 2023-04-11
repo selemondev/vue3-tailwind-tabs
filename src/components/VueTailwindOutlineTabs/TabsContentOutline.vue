@@ -1,7 +1,6 @@
 <script setup lang='ts'>
 export interface Props {
     TabsContentTextColor?: string
-    TabsContentWidth?: number | string,
     TabsContentBackgroundColor?: string
 };
 
@@ -12,7 +11,7 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-    <section :class="[props.TabsContentWidth ? `rounded-md p-4 w-${props.TabsContentWidth} ${props.TabsContentBackgroundColor}` : `rounded-md p-4 w-72 ${props.TabsContentBackgroundColor} sm:w-[768px]`]">
+    <section :class="`p-4 ${props.TabsContentBackgroundColor} ${props.TabsContentBackgroundColor}`">
         <div :class="props.TabsContentTextColor">
             <slot/>
         </div>
