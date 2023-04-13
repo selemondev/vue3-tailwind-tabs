@@ -17,9 +17,12 @@ const props = withDefaults(defineProps<Props>(), {
         <li @click="$emit('onClick')" class="cursor-pointer flex items-center space-x-1">
             <slot name="icon"></slot>
             <div class="py-2 w-20 sm:w-auto">
-                <span
-                    :class="[props.isActive || props.titleSize ? `${props.activeTitleColor} ${props.titleSize} font-bold` : `text-black ${props.titleSize} dark:text-white`]">{{
-                        props.title }}</span>
+                <span :class="[
+                    props.titleSize ? `${props.titleSize} font-bold` : '',
+                    props.isActive ? props.activeTitleColor : 'text-black dark:text-white']">
+                    {{ props.title }}
+                </span>
+
             </div>
         </li>
         <div class="w-full h-1">
