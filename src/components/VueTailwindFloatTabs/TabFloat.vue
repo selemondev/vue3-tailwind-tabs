@@ -21,7 +21,9 @@ const props = withDefaults(defineProps<Props>(), {
                 <slot name="icon"></slot>
                 <div class="py-2 w-12 sm:w-auto">
                     <span
-                        :class="[props.floatIsActive || props.floatTitleSize ? `${props.floatActiveTitleColor} ${props.floatTitleSize} font-bold` : `text-black ${props.floatTitleSize} dark:text-white`]">{{
+                    :class="[
+                    props.floatTitleSize ? `${props.floatTitleSize} font-bold` : '',
+                    props.floatIsActive ? props.floatActiveTitleColor : 'text-black dark:text-white']">{{
                             props.floatTitle }}</span>
                 </div>
             </li>

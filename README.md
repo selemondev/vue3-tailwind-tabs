@@ -248,7 +248,7 @@ yarn add --dev @iconify/vue
 
 - `title` - The title of the tab.
 
-- `titleSize` - The size of the title. By default it is `text-sm`.
+- `titleSize` - The size of the title. By default it is `text-base`.
 
 - `isActive` - A boolean value that indicates whether the tab is currently active.
 
@@ -269,7 +269,7 @@ yarn add --dev @iconify/vue
 
 - `floatTitle` - The title of the float tab.
 
-- `floatTitleSize` - The size of the title. By default it is `text-sm`.
+- `floatTitleSize` - The size of the title. By default it is `text-base`.
 
 - `floatIsActive` - A boolean value that indicates whether the float tab is currently active.
 
