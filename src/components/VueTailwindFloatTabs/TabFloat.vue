@@ -3,13 +3,15 @@ export interface Props {
     floatTitle: string,
     floatIsActive: boolean,
     floatActiveTitleColor: string,
+    floatTitleColor?: string,
     floatTitleSize?: string,
     floatBarColor?: string
 }
 const props = withDefaults(defineProps<Props>(), {
     floatActiveTitleColor: 'text-purple-500',
     floatBarColor: 'bg-gray-400/30 dark:bg-gray-500/30',
-    floatTitleSize: 'text-base'
+    floatTitleSize: 'text-base',
+    floatTitleColor: 'text-black dark:text-white'
 });
 </script>
 
@@ -20,11 +22,11 @@ const props = withDefaults(defineProps<Props>(), {
                 class="cursor-pointer h-12 rounded-lg flex justify-center items-center px-4 space-x-1">
                 <slot name="icon"></slot>
                 <div class="py-2 w-12 sm:w-auto">
-                    <span
-                    :class="[
-                    props.floatTitleSize ? `${props.floatTitleSize} font-bold` : '',
-                    props.floatIsActive ? props.floatActiveTitleColor : 'text-black dark:text-white']">{{
-                            props.floatTitle }}</span>
+                    <span :class="[
+                        props.floatTitleSize ? `${props.floatTitleSize} font-bold` : '',
+                        props.floatIsActive ? props.floatActiveTitleColor : '',
+                        props.floatTitleColor ? props.floatTitleColor : 'text-black dark:text-white']">{{
+        props.floatTitle }}</span>
                 </div>
             </li>
             <div>

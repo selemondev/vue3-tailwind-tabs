@@ -248,6 +248,8 @@ yarn add --dev @iconify/vue
 
 - `title` - The title of the tab.
 
+- `titleColor` - The color of the title.
+
 - `titleSize` - The size of the title. By default it is `text-base`.
 
 - `isActive` - A boolean value that indicates whether the tab is currently active.
@@ -268,6 +270,8 @@ yarn add --dev @iconify/vue
 #### TabFloat props:
 
 - `floatTitle` - The title of the float tab.
+
+- `floatTitleColor` - The color of the float title.
 
 - `floatTitleSize` - The size of the title. By default it is `text-base`.
 

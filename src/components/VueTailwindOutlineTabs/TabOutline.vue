@@ -4,11 +4,13 @@ export interface Props {
     isActive: boolean,
     activeTitleColor: string,
     titleSize?: string
+    titleColor?: string,
     barColor?: string
 }
 const props = withDefaults(defineProps<Props>(), {
     activeTitleColor: 'text-purple-500',
-    titleSize: 'text-base'
+    titleSize: 'text-base',
+    titleColor: 'text-black dark:text-white'
 });
 </script>
 
@@ -19,7 +21,8 @@ const props = withDefaults(defineProps<Props>(), {
             <div class="py-2 w-20 sm:w-auto">
                 <span :class="[
                     props.titleSize ? `${props.titleSize} font-bold` : '',
-                    props.isActive ? props.activeTitleColor : 'text-black dark:text-white']">
+                    props.isActive ? props.activeTitleColor : '',
+                    props.titleColor ? props.titleColor : 'text-black dark:text-white']">
                     {{ props.title }}
                 </span>
 
