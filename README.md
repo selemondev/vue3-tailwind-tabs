@@ -10,13 +10,12 @@ Before you install vue3-tailwind-tabs, ensure that you have TailwindCss installe
 npm install vue3-tailwind-tabs
 ```
 
-After installation, you have the option to register the components globally and also don't forget to import the styles as shown below:
+After installation, you have the option to register the components globally as shown below:
 
 ```ts
 import { createApp } from 'vue'
 import './style.css'
 import { TabFloatGroup, TabsFloatContent, TabsFloatWrapper, TabFloat, TabOutline, TabsContentOutline, TabsWrapperOutline, TabGroupOutline  } from "vue3-tailwind-tabs";
-import "vue3-tailwind-tabs/dist/style.css"
 import App from './App.vue'
 const app = createApp(App)
 app.component('TabFloatGroup', TabFloatGroup),
@@ -30,12 +29,13 @@ app.component('TabGroupOutline', TabGroupOutline)
 app.mount('#app')
 ```
 
-or you can import the components in the component where they are required and use them as shown below : 
+or you can import the components in the component where they are required and also don't forget to import the styles as shown below : 
 
 ```ts
 <script setup lang='ts'>
 import { TabOutline, TabsContentOutline, TabsWrapperOutline, TabGroupOutline } from "vue3-tailwind-tabs";
 import { TabFloatGroup, TabsFloatContent, TabsFloatWrapper, TabFloat } from "vue3-tailwind-tabs";
+import "vue3-tailwind-tabs/dist/style.css"
 import { ref } from "vue";
 import { Icon } from "@iconify/vue";
 type Tab = string;
