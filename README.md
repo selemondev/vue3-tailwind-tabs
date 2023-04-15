@@ -1,4 +1,4 @@
-# :construction: WIP
+# :construction: Work In Progress
 
 # Vue 3 Tailwind Tabs
 
