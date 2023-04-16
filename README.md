@@ -33,8 +33,7 @@ or you can import the components in the component where they are required as sho
 
 ```ts
 <script setup lang='ts'>
-import { TabOutline, TabsContentOutline, TabsWrapperOutline, TabGroupOutline } from "vue3-tailwind-tabs";
-import { TabFloatGroup, TabsFloatContent, TabsFloatWrapper, TabFloat } from "vue3-tailwind-tabs";
+import { TabOutline, TabsContentOutline, TabsWrapperOutline, TabGroupOutline, TabFloatGroup, TabsFloatContent, TabsFloatWrapper, TabFloat } from "vue3-tailwind-tabs";
 import { ref } from "vue";
 import { Icon } from "@iconify/vue";
 type Tab = string;
@@ -216,7 +215,7 @@ To configure Tailwind to work with the `vue3-tailwind-tabs` library, you can add
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}", 
-  '**node_modules/vue3-tailwind-tabs/**/*.{vue,js,jsx,ts,tsx}**'
+  'node_modules/vue3-tailwind-tabs/**/*.{vue,js,jsx,ts,tsx}'
   ],
   theme: {
     extend: {},
