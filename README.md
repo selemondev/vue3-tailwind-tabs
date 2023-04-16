@@ -218,7 +218,7 @@ To configure Tailwind to work with the `vue3-tailwind-tabs` library, you can add
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}", 
-  '**node_modules/vue3-tailwind-tabs/**/*.{vue,js,jsx,ts,tsx}**'
+  =='node_modules/vue3-tailwind-tabs/**/*.{vue,js,jsx,ts,tsx}'==
   ],
   theme: {
     extend: {},
