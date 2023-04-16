@@ -3,9 +3,11 @@ import vue from "@vitejs/plugin-vue";
 import { resolve } from "path";
 import dts from 'vite-plugin-dts'
 import { fileURLToPath } from "url";
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
+    cssCodeSplit: true,
     lib: {
       entry: resolve(__dirname, './src/components/build.ts'),
       name: "vue3-tailwind-tabs",
@@ -23,7 +25,8 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    dts()
+    dts(),
+    // cssInjectedByJsPlugin()
   ],
   resolve: {
     alias: {

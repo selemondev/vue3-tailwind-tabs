@@ -16,7 +16,7 @@ const clickTab = (name: Tab) => {
         <section>
           <TabGroupOutline>
             <TabsWrapperOutline>
-              <TabOutline activeTitleColor="text-green-500" barColor="border-green-500" title="Vue"
+              <TabOutline titleColor="text-red-500" activeTitleColor="text-green-500" barColor="border-green-500" title="Vue"
                 :isActive="activeTab === 'vue'" @onClick="clickTab('vue')">
                 <template #icon>
                   <Icon icon="logos:vue" :class="{ 'text-green-500': activeTab === 'vue' }"
