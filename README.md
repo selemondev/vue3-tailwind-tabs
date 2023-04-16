@@ -29,13 +29,12 @@ app.component('TabGroupOutline', TabGroupOutline)
 app.mount('#app')
 ```
 
-or you can import the components in the component where they are required and also don't forget to import the styles as shown below : 
+or you can import the components in the component where they are required as shown below : 
 
 ```ts
 <script setup lang='ts'>
 import { TabOutline, TabsContentOutline, TabsWrapperOutline, TabGroupOutline } from "vue3-tailwind-tabs";
 import { TabFloatGroup, TabsFloatContent, TabsFloatWrapper, TabFloat } from "vue3-tailwind-tabs";
-import "vue3-tailwind-tabs/dist/style.css"
 import { ref } from "vue";
 import { Icon } from "@iconify/vue";
 type Tab = string;
@@ -210,6 +209,24 @@ const clickTab = (name: Tab) => {
   </div>
 </template>
 ```
+
+To configure Tailwind to work with the `vue3-tailwind-tabs` library, you can add the following to your `tailwind.config.js` file:
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}", 
+  '**node_modules/vue3-tailwind-tabs/**/*.{vue,js,jsx,ts,tsx}**'
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+This will ensure that the `vue3-tailwind-tabs` library is included in the content to be processed by Tailwind.
+
 You can choose to use the `TabOutline` components, `TabFloat` components or use both of them together as shown in the example above.
 
 For the icons you can choose to use an `SVG` or install `iconify/vue` to use over 100K+ icons from [Iconify](https://iconify.design). For the example above I have used the `iconify/vue` package for displaying the icons.
