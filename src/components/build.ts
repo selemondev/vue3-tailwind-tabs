@@ -1,3 +1,4 @@
+import "../assets/css/tailwind.css";
 import { TabsContentOutline, TabGroupOutline, TabsWrapperOutline, TabOutline } from "./VueTailwindOutlineTabs/index";
 import { TabsFloatContent, TabsFloatWrapper, TabFloatGroup, TabFloat } from "./VueTailwindFloatTabs/index";
 export {

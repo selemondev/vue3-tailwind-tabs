@@ -30,20 +30,20 @@
       "import": "./dist/vue3-tailwind-tabs.es.js",
       "require": "./dist/vue3-tailwind-tabs.umd.js"
     },
-    "./dist/style.css": {
-      "import": "./dist/style.css",
-      "require": "./dist/style.css"
+    "./dist/build.css": {
+      "import": "./dist/build.css",
+      "require": "./dist/build.css"
     }
   },
   "types": "./dist/components/build.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build && pnpm run build:style",
-    "build:style": "tailwindcss -i ./src/assets/css/tailwind.css -o ./dist/style.css",
+    "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "tailwind-scrollbar-hide": "^1.1.7",
+    "vite-plugin-css-injected-by-js": "^3.1.0",
     "vue": "^3.2.47"
   },
   "devDependencies": {
