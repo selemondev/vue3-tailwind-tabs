@@ -486,6 +486,7 @@ module.exports = {
   plugins: [],
 };
 ```
+This will ensure that the `vue3-tailwind-tabs` library is included in the content to be processed by Tailwind.
 
 For the icons you can choose to use an `SVG` or install the `Icon module` to use over 100K+ icons from [Iconify](https://iconify.design). For the example above I have used the `Nuxt Icon` module to display the icons.
 
