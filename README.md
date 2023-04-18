@@ -2,7 +2,7 @@
 
 A collection of Vue 3 components for creating tabs using TailwindCss.
 
-## Usage 
+## Usage with Vue 3
 
 Before you install vue3-tailwind-tabs, ensure that you have TailwindCss installed in your project. If you need to quickly set up a new Vue 3 project with TailwindCss, you can use this [Tailwind CLI](https://github.com/AndrejJurkin/create-tw) tool.
 
