@@ -244,6 +244,55 @@ With Yarn:
 yarn add --dev @iconify/vue
 ```
 
+
+## Usage with Nuxt 3
+
+Before you install vue3-tailwind-tabs, ensure that you have TailwindCss installed in your project. If you need to quickly set up a new Nuxt 3 project with TailwindCss, you can use this [Tailwind CLI](https://github.com/AndrejJurkin/create-tw) tool.
+
+```bash
+npm install vue3-tailwind-tabs
+```
+
+After installation, register the components as a Nuxt plugin. You can read more about Nuxt plugins [here](https://nuxt.com/docs/guide/directory-structure/plugins). Create a plugin file `plugins/tailwindTabs.client.ts`. We are using the `.client` prefix to tell Nuxt that our plugin should only be used in the client side. Register the components as shown below :
+
+```ts
+// plugins/tailwindTabs.client.ts
+import { TabFloatGroup, TabsFloatContent, TabsFloatWrapper, TabFloat, TabOutline, TabsContentOutline, TabsWrapperOutline, TabGroupOutline  } from "vue3-tailwind-tabs";
+export default defineNuxtPlugin(nuxtApp => {
+    nuxtApp.vueApp.component('TabFloatGroup', TabFloatGroup);
+    nuxtApp.vueApp.component('TabsFloatContent', TabsFloatContent);
+    nuxtApp.vueApp.component('TabsFloatWrapper', TabsFloatWrapper);
+    nuxtApp.vueApp.component('TabFloat', TabFloat);
+    nuxtApp.vueApp.component('TabOutline', TabOutline);
+    nuxtApp.vueApp.component('TabsContentOutline', TabsContentOutline);
+    nuxtApp.vueApp.component('TabsWrapperOutline', TabsWrapperOutline);
+    nuxtApp.vueApp.component('TabGroupOutline', TabGroupOutline);
+})
+```
+
+then in your components directory create a `TabsComponent.vue` file ( You can name it whatever you want ) and wrap the components inside the `<ClientOnly/>` component as shown below :
+
+```js
+//components/TabsComponent.vue
+<template>
+    <div>
+        <ClientOnly>
+            <AnimatedCounter :value="500" :duration="1000" class="counter" />
+        </ClientOnly>
+    </div>
+</template>
+<style>
+.counter {
+  font-size: 40px;
+}
+</style>
+
+```
+
+we are using the `<ClientOnly/>` component to render our `AnimatedCounter` component only in the client side. You can read more about the `ClientOnly` component [here](https://nuxt.com/docs/api/components/client-only)
+
+
+
 ## Features :sparkles:
 
 - 🗂️ Two types of tabs: TabOutline and TabFloat
