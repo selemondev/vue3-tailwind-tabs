@@ -2,6 +2,20 @@
 
 A collection of Vue 3 components for creating tabs using TailwindCss.
 
+## Features :sparkles:
+
+- 🗂️ Two types of tabs: TabOutline and TabFloat
+
+- 🎨 Customizable tab properties such as title, active state, color, and width
+
+- 🌗 Light and dark theme compatible
+
+- 🎭 Ability to add icons to the tabs
+
+- 🔌 Global component registration or component import for use in individual components
+
+- 🚀 Uses TailwindCSS for easy customization.
+
 ## Usage with Vue 3
 
 Before you install vue3-tailwind-tabs, ensure that you have TailwindCss installed in your project. If you need to quickly set up a new Vue 3 project with TailwindCss, you can use this [Tailwind CLI](https://github.com/AndrejJurkin/create-tw) tool.
@@ -517,21 +531,6 @@ export default defineNuxtConfig({
 
 Congratulations 🎉. You can now use `vue3-tailwind-tabs` with Nuxt 3.
 
-
-
-## Features :sparkles:
-
-- 🗂️ Two types of tabs: TabOutline and TabFloat
-
-- 🎨 Customizable tab properties such as title, active state, color, and width
-
-- 🌗 Light and dark theme compatible
-
-- 🎭 Ability to add icons to the tabs
-
-- 🔌 Global component registration or component import for use in individual components
-
-- 🚀 Uses TailwindCSS for easy customization
 
 ## Props
 
