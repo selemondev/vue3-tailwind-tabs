@@ -16,28 +16,28 @@ const clickTab = (name: Tab) => {
         <section>
           <TabGroupOutline>
             <TabsWrapperOutline>
-              <TabOutline barColor="border-green-500" title="Vue"
+              <TabOutline title="Vue"
                 :isActive="activeTab === 'vue'" @onClick="clickTab('vue')">
                 <template #icon>
                   <Icon icon="logos:vue" :class="{ 'text-green-500': activeTab === 'vue' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabOutline>
-              <TabOutline barColor="border-green-500" title="Vueuse"
+              <TabOutline title="Vueuse"
                 :isActive="activeTab === 'vueuse'" @onClick="clickTab('vueuse')">
                 <template #icon>
                   <Icon icon="logos:vueuse" :class="{ 'text-green-500': activeTab === 'vueuse' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabOutline>
-              <TabOutline barColor="border-green-500" title="Nuxt"
+              <TabOutline title="Nuxt"
                 :isActive="activeTab === 'nuxt'" @onClick="clickTab('nuxt')">
                 <template #icon>
                   <Icon icon="logos:nuxt-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabOutline>
-              <TabOutline barColor="border-green-500" title="Gridsome"
+              <TabOutline title="Gridsome"
                 :isActive="activeTab === 'gridsome'" @onClick="clickTab('gridsome')">
                 <template #icon>
                   <Icon icon="logos:gridsome-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
