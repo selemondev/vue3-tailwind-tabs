@@ -5,13 +5,13 @@ export interface Props {
 };
 
 const props = withDefaults(defineProps<Props>(), {
-    TabsContentTextColor: 'text-black dark:text-white',
-    TabsContentBackgroundColor: 'bg-gray-100 dark:bg-gray-400/30'
+    TabsContentTextColor: 'text-black',
+    TabsContentBackgroundColor: 'bg-gray-100'
 });
 </script>
 
 <template>
-    <section :class="`p-4 ${props.TabsContentBackgroundColor} ${props.TabsContentBackgroundColor}`">
+    <section :class="`p-4  ${props.TabsContentBackgroundColor} ${props.TabsContentBackgroundColor}`">
         <div :class="props.TabsContentTextColor">
             <slot/>
         </div>

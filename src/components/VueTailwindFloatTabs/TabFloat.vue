@@ -8,10 +8,10 @@ export interface Props {
     floatBarColor?: string
 }
 const props = withDefaults(defineProps<Props>(), {
-    floatActiveTitleColor: 'text-purple-500',
-    floatBarColor: 'bg-gray-400/30 dark:bg-gray-500/30',
+    floatActiveTitleColor: 'text-green-500',
+    floatBarColor: 'bg-gray-100',
     floatTitleSize: 'text-base',
-    floatTitleColor: 'text-black dark:text-white'
+    floatTitleColor: 'text-black'
 });
 </script>
 

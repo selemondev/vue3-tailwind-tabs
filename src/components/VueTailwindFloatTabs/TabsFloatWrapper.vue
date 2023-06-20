@@ -2,7 +2,7 @@
 const props = withDefaults(defineProps<{
   TabFloatBackgroundColor?: string
 }>(), {
-  TabFloatBackgroundColor: 'bg-gray-200 dark:bg-gray-600/40'
+  TabFloatBackgroundColor: 'bg-gray-200'
 });
 </script>
 <template>

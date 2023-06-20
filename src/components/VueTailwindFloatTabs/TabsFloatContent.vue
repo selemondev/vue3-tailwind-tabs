@@ -5,8 +5,8 @@ export interface Props {
 };
 
 const props = withDefaults(defineProps<Props>(), {
-    TabsFloatContentTextColor: 'text-black dark:text-white',
-    TabsFloatContentBackgroundColor: 'bg-gray-100 dark:bg-gray-400/30'
+    TabsFloatContentTextColor: 'text-black',
+    TabsFloatContentBackgroundColor: 'bg-gray-100'
 
 });
 </script>
