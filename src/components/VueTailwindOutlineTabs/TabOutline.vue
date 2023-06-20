@@ -8,9 +8,9 @@ export interface Props {
     barColor?: string
 }
 const props = withDefaults(defineProps<Props>(), {
-    activeTitleColor: 'text-purple-500',
+    activeTitleColor: 'text-green-500',
     titleSize: 'text-base',
-    titleColor: 'text-black dark:text-white'
+    titleColor: 'text-black'
 });
 </script>
 
@@ -22,7 +22,7 @@ const props = withDefaults(defineProps<Props>(), {
                 <span :class="[
                     props.titleSize ? `${props.titleSize} font-bold` : '',
                     props.isActive ? props.activeTitleColor : '',
-                    props.titleColor ? props.titleColor : 'text-black dark:text-white']">
+                    props.titleColor ? props.titleColor : 'text-black']">
                     {{ props.title }}
                 </span>
 

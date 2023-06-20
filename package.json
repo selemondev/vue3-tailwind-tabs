@@ -1,7 +1,7 @@
 {
   "name": "vue3-tailwind-tabs",
   "private": false,
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A collection of Vue 3 components for creating tabs with Tailwind CSS.",
   "author": "Selemon Brahanu",
   "keywords": [
@@ -27,6 +27,7 @@
   "module": "./dist/vue3-tailwind-tabs.es.js",
   "exports": {
     ".": {
+      "types": "./dist/components/build.d.ts",
       "import": "./dist/vue3-tailwind-tabs.es.js",
       "require": "./dist/vue3-tailwind-tabs.umd.js"
     },
@@ -38,8 +39,12 @@
   "types": "./dist/components/build.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "build": "vite build && vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
+    "preserve": "vite build",
+    "serve": "vite preview --port 5050",
+    "typecheck": "vue-tsc --noEmit",
+    "preview": "vite preview",
+    "test": "exit 0"
   },
   "peerDependencies": {
     "vue": "^3.2.47"

@@ -16,28 +16,28 @@ const clickTab = (name: Tab) => {
         <section>
           <TabGroupOutline>
             <TabsWrapperOutline>
-              <TabOutline titleColor="text-red-500" activeTitleColor="text-green-500" barColor="border-green-500" title="Vue"
+              <TabOutline barColor="border-green-500" title="Vue"
                 :isActive="activeTab === 'vue'" @onClick="clickTab('vue')">
                 <template #icon>
                   <Icon icon="logos:vue" :class="{ 'text-green-500': activeTab === 'vue' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabOutline>
-              <TabOutline activeTitleColor="text-green-500" barColor="border-green-500" title="Vueuse"
+              <TabOutline barColor="border-green-500" title="Vueuse"
                 :isActive="activeTab === 'vueuse'" @onClick="clickTab('vueuse')">
                 <template #icon>
                   <Icon icon="logos:vueuse" :class="{ 'text-green-500': activeTab === 'vueuse' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabOutline>
-              <TabOutline activeTitleColor="text-green-500" barColor="border-green-500" title="Nuxt"
+              <TabOutline barColor="border-green-500" title="Nuxt"
                 :isActive="activeTab === 'nuxt'" @onClick="clickTab('nuxt')">
                 <template #icon>
                   <Icon icon="logos:nuxt-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabOutline>
-              <TabOutline activeTitleColor="text-green-500" barColor="border-green-500" title="Gridsome"
+              <TabOutline barColor="border-green-500" title="Gridsome"
                 :isActive="activeTab === 'gridsome'" @onClick="clickTab('gridsome')">
                 <template #icon>
                   <Icon icon="logos:gridsome-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
@@ -95,28 +95,28 @@ const clickTab = (name: Tab) => {
         <section>
           <TabFloatGroup>
             <TabsFloatWrapper>
-              <TabFloat floatActiveTitleColor="text-green-500" floatTitle="Vue" :floatIsActive="activeTab === 'vue'"
+              <TabFloat floatTitle="Vue" :floatIsActive="activeTab === 'vue'"
                 @onClick="clickTab('vue')">
                 <template #icon>
                   <Icon icon="logos:vue" :class="{ 'text-green-500': activeTab === 'vue' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabFloat>
-              <TabFloat floatActiveTitleColor="text-green-500" floatTitle="Vueuse" :floatIsActive="activeTab === 'vueuse'"
+              <TabFloat floatTitle="Vueuse" :floatIsActive="activeTab === 'vueuse'"
                 @onClick="clickTab('vueuse')">
                 <template #icon>
                   <Icon icon="logos:vueuse" :class="{ 'text-green-500': activeTab === 'vueuse' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabFloat>
-              <TabFloat floatActiveTitleColor="text-green-500" floatTitle="Nuxt" :floatIsActive="activeTab === 'nuxt'"
+              <TabFloat floatTitle="Nuxt" :floatIsActive="activeTab === 'nuxt'"
                 @onClick="clickTab('nuxt')">
                 <template #icon>
                   <Icon icon="logos:nuxt-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabFloat>
-              <TabFloat floatActiveTitleColor="text-green-500" floatTitle="Gridsome"
+              <TabFloat floatTitle="Gridsome"
                 :floatIsActive="activeTab === 'gridsome'" @onClick="clickTab('gridsome')">
                 <template #icon>
                   <Icon icon="logos:gridsome-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
