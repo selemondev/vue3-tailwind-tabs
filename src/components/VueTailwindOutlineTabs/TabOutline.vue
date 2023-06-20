@@ -10,7 +10,8 @@ export interface Props {
 const props = withDefaults(defineProps<Props>(), {
     activeTitleColor: 'text-green-500',
     titleSize: 'text-base',
-    titleColor: 'text-black'
+    titleColor: 'text-black',
+    barColor: 'border-green-500'
 });
 </script>
 
