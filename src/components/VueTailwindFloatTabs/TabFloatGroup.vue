@@ -7,7 +7,7 @@ const props = withDefaults(defineProps<{
 </script>
 
 <template>
-    <div :class="[props.TabFloatGroupWidth ? props.TabFloatGroupWidth : '']" class="rounded-md overflow-x-auto">
+    <div :class="[props.TabFloatGroupWidth ? props.TabFloatGroupWidth : '']" class="rounded-md relative overflow-x-auto">
         <slot />
     </div>
 </template>

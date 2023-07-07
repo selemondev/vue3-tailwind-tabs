@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { useAttrs } from 'vue';
+const attrs = useAttrs();
 const props = withDefaults(defineProps<{
   TabFloatBackgroundColor?: string
 }>(), {
@@ -6,16 +8,9 @@ const props = withDefaults(defineProps<{
 });
 </script>
 <template>
-    <section :class='`grid place-items-center ${props.TabFloatBackgroundColor} rounded-md sm:hidden`'>
-      <div class="w-72 scrollbar-hide overflow-auto">
-        <ul class="flex justify-between items-center w-full">
-          <slot />
-        </ul>
-      </div>
-    </section>
     <section>
-      <div :class="`hidden scrollbar-hide overflow-auto rounded-md ${props.TabFloatBackgroundColor} sm:flex sm:w-full py-4`">
-        <ul class="flex justify-between items-center sm:w-full sm:flex sm:justify-between sm:items-center">
+      <div :class="`hidden scrollbar-hide overflow-auto rounded-md ${props.TabFloatBackgroundColor} sm:flex py-4`">
+        <ul v-bind="attrs" class="flex items-center w-full">
           <slot />
         </ul>
       </div>
