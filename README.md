@@ -1,6 +1,6 @@
 # Vue 3 Tailwind Tabs :rocket:
 
-A collection of Vue 3 components for creating tabs using TailwindCss.
+A collection of Vue 3 components for creating customizable tabs using TailwindCss.
 
 ## Features :sparkles:
 
