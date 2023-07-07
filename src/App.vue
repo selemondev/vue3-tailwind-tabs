@@ -12,8 +12,8 @@ const clickTab = (name: Tab) => {
 <template>
   <div class="grid place-items-center w-full min-h-screen">
     <div>
-      <main class="mt-6 space-y-10 ">
-        <section>
+      <main class="mt-6 space-y-10">
+        <!-- <section>
           <TabGroupOutline>
             <TabsWrapperOutline>
               <TabOutline title="Vue"
@@ -90,7 +90,7 @@ const clickTab = (name: Tab) => {
               </div>
             </TabsContentOutline>
           </TabGroupOutline>
-        </section>
+        </section> -->
 
         <section>
           <TabFloatGroup>
