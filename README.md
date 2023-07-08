@@ -60,8 +60,8 @@ const clickTab = (name: string) => {
     <div>
       <main class="mt-6 space-y-10">
         <section>
-          <TabGroupOutline TabOutlineCenter>
-            <TabsWrapperOutline TabOutlineStart>
+          <TabGroupOutline>
+            <TabsWrapperOutline TabOutlineCenter>
               <TabOutline title="Vue" :isActive="activeTab === 'vue'" @onClick="clickTab('vue')">
                 <template #icon>
                   <Icon icon="logos:vue" :class="{ 'text-green-500': activeTab === 'vue' }"
