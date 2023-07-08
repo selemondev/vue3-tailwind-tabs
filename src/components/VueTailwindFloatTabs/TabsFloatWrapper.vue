@@ -8,9 +8,9 @@ const props = withDefaults(defineProps<{
 });
 </script>
 <template>
-    <section>
-      <div :class="`hidden scrollbar-hide overflow-auto rounded-md ${props.TabFloatBackgroundColor} sm:flex py-4`">
-        <ul v-bind="attrs" class="flex items-center w-full">
+    <section class="flex" v-bind="attrs">
+      <div :class="`scrollbar-hide overflow-auto rounded-md ${props.TabFloatBackgroundColor} sm:flex py-4`">
+        <ul class="flex justify-between items-center px-2 w-full">
           <slot />
         </ul>
       </div>
