@@ -50,42 +50,37 @@ or you can import the components in the component where they are required as sho
 import { TabOutline, TabsContentOutline, TabsWrapperOutline, TabGroupOutline, TabFloatGroup, TabsFloatContent, TabsFloatWrapper, TabFloat } from "vue3-tailwind-tabs";
 import { ref } from "vue";
 import { Icon } from "@iconify/vue";
-type Tab = string;
 const activeTab = ref("vue");
-const clickTab = (name: Tab) => {
+const clickTab = (name: string) => {
   activeTab.value = name;
-}
+};
 </script>
 <template>
   <div class="grid place-items-center w-full min-h-screen">
     <div>
-      <main class="mt-6 space-y-10 ">
+      <main class="mt-6 space-y-10">
         <section>
           <TabGroupOutline>
-            <TabsWrapperOutline>
-              <TabOutline title="Vue"
-                :isActive="activeTab === 'vue'" @onClick="clickTab('vue')">
+            <TabsWrapperOutline TabOutlineStart>
+              <TabOutline title="Vue" :isActive="activeTab === 'vue'" @onClick="clickTab('vue')">
                 <template #icon>
                   <Icon icon="logos:vue" :class="{ 'text-green-500': activeTab === 'vue' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabOutline>
-              <TabOutline title="Vueuse"
-                :isActive="activeTab === 'vueuse'" @onClick="clickTab('vueuse')">
+              <TabOutline title="Vueuse" :isActive="activeTab === 'vueuse'" @onClick="clickTab('vueuse')">
                 <template #icon>
                   <Icon icon="logos:vueuse" :class="{ 'text-green-500': activeTab === 'vueuse' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabOutline>
-              <TabOutline title="Nuxt"
-                :isActive="activeTab === 'nuxt'" @onClick="clickTab('nuxt')">
+              <TabOutline title="Nuxt" :isActive="activeTab === 'nuxt'" @onClick="clickTab('nuxt')">
                 <template #icon>
                   <Icon icon="logos:nuxt-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabOutline>
-              <TabOutline title="Gridsome"
-                :isActive="activeTab === 'gridsome'" @onClick="clickTab('gridsome')">
+              <TabOutline title="Gridsome" :isActive="activeTab === 'gridsome'" @onClick="clickTab('gridsome')">
                 <template #icon>
                   <Icon icon="logos:gridsome-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
@@ -132,8 +127,7 @@ const clickTab = (name: Tab) => {
                 eligendi dolores voluptas delectus ea autem ut nam corrupti consequuntur possimus! Veritatis, accusamus!
                 Veniam, incidunt ad. Illo, voluptate voluptatem corrupti tenetur dolore alias rem ut maxime amet porro est
                 explicabo nostrum consectetur non ex odit, in, illum atque deserunt expedita fugiat praesentium sunt. Quo
-                reiciendis sequi error laboriosam voluptatem. Nemo aliquam autem delectus incidunt, vitae itaque
-                cupiditate doloribus.
+                reiciendis sequi error laboriosam voluptatem. Nemo aliquam autem delectus incidunt, vitae itaque.
               </div>
             </TabsContentOutline>
           </TabGroupOutline>
@@ -142,29 +136,25 @@ const clickTab = (name: Tab) => {
         <section>
           <TabFloatGroup>
             <TabsFloatWrapper>
-              <TabFloat floatTitle="Vue" :floatIsActive="activeTab === 'vue'"
-                @onClick="clickTab('vue')">
+              <TabFloat floatTitle="Vue" :floatIsActive="activeTab === 'vue'" @onClick="clickTab('vue')">
                 <template #icon>
                   <Icon icon="logos:vue" :class="{ 'text-green-500': activeTab === 'vue' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabFloat>
-              <TabFloat floatTitle="Vueuse" :floatIsActive="activeTab === 'vueuse'"
-                @onClick="clickTab('vueuse')">
+              <TabFloat floatTitle="Vueuse" :floatIsActive="activeTab === 'vueuse'" @onClick="clickTab('vueuse')">
                 <template #icon>
                   <Icon icon="logos:vueuse" :class="{ 'text-green-500': activeTab === 'vueuse' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabFloat>
-              <TabFloat floatTitle="Nuxt" :floatIsActive="activeTab === 'nuxt'"
-                @onClick="clickTab('nuxt')">
+              <TabFloat floatTitle="Nuxt" :floatIsActive="activeTab === 'nuxt'" @onClick="clickTab('nuxt')">
                 <template #icon>
                   <Icon icon="logos:nuxt-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabFloat>
-              <TabFloat floatTitle="Gridsome"
-                :floatIsActive="activeTab === 'gridsome'" @onClick="clickTab('gridsome')">
+              <TabFloat floatTitle="Gridsome" :floatIsActive="activeTab === 'gridsome'" @onClick="clickTab('gridsome')">
                 <template #icon>
                   <Icon icon="logos:gridsome-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
@@ -211,8 +201,7 @@ const clickTab = (name: Tab) => {
                 eligendi dolores voluptas delectus ea autem ut nam corrupti consequuntur possimus! Veritatis, accusamus!
                 Veniam, incidunt ad. Illo, voluptate voluptatem corrupti tenetur dolore alias rem ut maxime amet porro est
                 explicabo nostrum consectetur non ex odit, in, illum atque deserunt expedita fugiat praesentium sunt. Quo
-                reiciendis sequi error laboriosam voluptatem. Nemo aliquam autem delectus incidunt, vitae itaque
-                cupiditate doloribus.
+                reiciendis sequi error laboriosam voluptatem. Nemo aliquam autem delectus incidunt, vitae itaque.
               </div>
             </TabsFloatContent>
           </TabFloatGroup>
@@ -289,11 +278,10 @@ then in your components directory create a `TabsComponent.vue` file ( You can na
 ```js
 //components/TabsComponent.vue
 <script setup lang='ts'>
-type Tab = string;
 const activeTab = ref("vue");
-const clickTab = (name: Tab) => {
+const clickTab = (name: string) => {
   activeTab.value = name;
-}
+};
 </script>
 <template>
   <div class="grid place-items-center w-full min-h-screen">
@@ -481,7 +469,7 @@ const clickTab = (name: Tab) => {
 ```
 we are using the `<ClientOnly/>` component to render our  components only in the client side. You can read more about the `ClientOnly` component [here](https://nuxt.com/docs/api/components/client-only).
 
-To configure Tailwind to work with the `vue3-tailwind-tabs` library, you can add the following to your `tailwind.config.js` file:
+To configure Tailwind to work with the `vue3-tailwind-tabs` library, you need to add the following to your `tailwind.config.js` file:
 
 ```js
 /** @type {import('tailwindcss').Config} */
@@ -550,11 +538,15 @@ Congratulations 🎉. You can now use `vue3-tailwind-tabs` with Nuxt 3.
 
 - `TabsContentTextColor` - The color of the content text.
 
+- `TabOutlineCenter` - To place the tab in the center.
+
+- `TabOutlineStart` - To place the tab at the start.
+
+- `TabOutlineEnd` - To place the tab at the end.
 
 - `TabsContentBackgroundColor` - The background color of the content area.
 
 - `TabGroupWidth` - The width of all the outline components.
-
 
 
 #### TabFloat props:
@@ -575,6 +567,11 @@ Congratulations 🎉. You can now use `vue3-tailwind-tabs` with Nuxt 3.
 
 - `TabsFloatContentBackgroundColor` - The background color of the float content area.
 
+- `TabFloatCenter` - To place the tab in the center.
+
+- `TabFloatStart` - To place the tab at the start.
+
+- `TabFloatEnd` - To place the tab at the end.
 
 - `TabFloatBackgroundColor` - The background color of where the float tab resides.
 
