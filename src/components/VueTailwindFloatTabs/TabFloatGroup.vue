@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 const props = withDefaults(defineProps<{
-    TabFloatGroupWidth: string | number
+    TabFloatGroupWidth?: string | number
 }>(), {
     TabFloatGroupWidth: 'w-72 sm:w-[768px]'
 });

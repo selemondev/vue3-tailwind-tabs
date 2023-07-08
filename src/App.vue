@@ -3,42 +3,37 @@ import { TabOutline, TabsContentOutline, TabsWrapperOutline, TabGroupOutline } f
 import { TabFloatGroup, TabsFloatContent, TabsFloatWrapper, TabFloat } from "./components/VueTailwindFloatTabs";
 import { ref } from "vue";
 import { Icon } from "@iconify/vue";
-type Tab = string;
 const activeTab = ref("vue");
-const clickTab = (name: Tab) => {
+const clickTab = (name: string) => {
   activeTab.value = name;
-}
+};
 </script>
 <template>
   <div class="grid place-items-center w-full min-h-screen">
     <div>
       <main class="mt-6 space-y-10">
-        <!-- <section>
+        <section>
           <TabGroupOutline>
-            <TabsWrapperOutline>
-              <TabOutline title="Vue"
-                :isActive="activeTab === 'vue'" @onClick="clickTab('vue')">
+            <TabsWrapperOutline class="justify-center">
+              <TabOutline title="Vue" :isActive="activeTab === 'vue'" @onClick="clickTab('vue')">
                 <template #icon>
                   <Icon icon="logos:vue" :class="{ 'text-green-500': activeTab === 'vue' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabOutline>
-              <TabOutline title="Vueuse"
-                :isActive="activeTab === 'vueuse'" @onClick="clickTab('vueuse')">
+              <TabOutline title="Vueuse" :isActive="activeTab === 'vueuse'" @onClick="clickTab('vueuse')">
                 <template #icon>
                   <Icon icon="logos:vueuse" :class="{ 'text-green-500': activeTab === 'vueuse' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabOutline>
-              <TabOutline title="Nuxt"
-                :isActive="activeTab === 'nuxt'" @onClick="clickTab('nuxt')">
+              <TabOutline title="Nuxt" :isActive="activeTab === 'nuxt'" @onClick="clickTab('nuxt')">
                 <template #icon>
                   <Icon icon="logos:nuxt-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabOutline>
-              <TabOutline title="Gridsome"
-                :isActive="activeTab === 'gridsome'" @onClick="clickTab('gridsome')">
+              <TabOutline title="Gridsome" :isActive="activeTab === 'gridsome'" @onClick="clickTab('gridsome')">
                 <template #icon>
                   <Icon icon="logos:gridsome-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
@@ -90,34 +85,30 @@ const clickTab = (name: Tab) => {
               </div>
             </TabsContentOutline>
           </TabGroupOutline>
-        </section> -->
+        </section>
 
         <section>
           <TabFloatGroup>
-            <TabsFloatWrapper>
-              <TabFloat floatTitle="Vue" :floatIsActive="activeTab === 'vue'"
-                @onClick="clickTab('vue')">
+            <TabsFloatWrapper class="justify-center">
+              <TabFloat floatTitle="Vue" :floatIsActive="activeTab === 'vue'" @onClick="clickTab('vue')">
                 <template #icon>
                   <Icon icon="logos:vue" :class="{ 'text-green-500': activeTab === 'vue' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabFloat>
-              <TabFloat floatTitle="Vueuse" :floatIsActive="activeTab === 'vueuse'"
-                @onClick="clickTab('vueuse')">
+              <TabFloat floatTitle="Vueuse" :floatIsActive="activeTab === 'vueuse'" @onClick="clickTab('vueuse')">
                 <template #icon>
                   <Icon icon="logos:vueuse" :class="{ 'text-green-500': activeTab === 'vueuse' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabFloat>
-              <TabFloat floatTitle="Nuxt" :floatIsActive="activeTab === 'nuxt'"
-                @onClick="clickTab('nuxt')">
+              <TabFloat floatTitle="Nuxt" :floatIsActive="activeTab === 'nuxt'" @onClick="clickTab('nuxt')">
                 <template #icon>
                   <Icon icon="logos:nuxt-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />
                 </template>
               </TabFloat>
-              <TabFloat floatTitle="Gridsome"
-                :floatIsActive="activeTab === 'gridsome'" @onClick="clickTab('gridsome')">
+              <TabFloat floatTitle="Gridsome" :floatIsActive="activeTab === 'gridsome'" @onClick="clickTab('gridsome')">
                 <template #icon>
                   <Icon icon="logos:gridsome-icon" :class="{ 'text-green-500': activeTab === 'nuxt' }"
                     class="text-xl font-medium w-6 h-6 mr-2" />

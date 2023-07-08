@@ -2,7 +2,7 @@
 export interface Props {
     floatTitle: string,
     floatIsActive: boolean,
-    floatActiveTitleColor: string,
+    floatActiveTitleColor?: string,
     floatTitleColor?: string,
     floatTitleSize?: string,
     floatBarColor?: string
