@@ -14,7 +14,7 @@ const clickTab = (name: string) => {
       <main class="mt-6 space-y-10">
         <section>
           <TabGroupOutline>
-            <TabsWrapperOutline TabOutlineStart>
+            <TabsWrapperOutline TabOutlineCenter>
               <TabOutline title="Vue" :isActive="activeTab === 'vue'" @onClick="clickTab('vue')">
                 <template #icon>
                   <Icon icon="logos:vue" :class="{ 'text-green-500': activeTab === 'vue' }"
@@ -88,7 +88,7 @@ const clickTab = (name: string) => {
 
         <section>
           <TabFloatGroup>
-            <TabsFloatWrapper>
+            <TabsFloatWrapper TabFloatCenter>
               <TabFloat floatTitle="Vue" :floatIsActive="activeTab === 'vue'" @onClick="clickTab('vue')">
                 <template #icon>
                   <Icon icon="logos:vue" :class="{ 'text-green-500': activeTab === 'vue' }"
