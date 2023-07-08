@@ -2,7 +2,7 @@
 export interface Props {
     title: string,
     isActive: boolean,
-    activeTitleColor: string,
+    activeTitleColor?: string,
     titleSize?: string
     titleColor?: string,
     barColor?: string
