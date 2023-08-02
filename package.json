@@ -1,20 +1,10 @@
 {
   "name": "vue3-tailwind-tabs",
+  "type": "module",
+  "version": "0.1.9",
   "private": false,
-  "version": "0.1.7",
   "description": "A collection of Vue 3 components for creating tabs with Tailwind CSS.",
   "author": "Selemon Brahanu",
-  "keywords": [
-    "vue",
-    "tailwindcss",
-    "typescript",
-    "tabs",
-    "components"
-  ],
-  "files": [
-    "dist"
-  ],
-  "type": "module",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -23,28 +13,39 @@
   "bugs": {
     "url": "https://github.com/selemondev/vue3-tailwind-tabs"
   },
-  "main": "./dist/vue3-tailwind-tabs.umd.js",
-  "module": "./dist/vue3-tailwind-tabs.es.js",
+  "keywords": [
+    "vue",
+    "tailwindcss",
+    "typescript",
+    "tabs",
+    "components"
+  ],
   "exports": {
     ".": {
       "types": "./dist/components/build.d.ts",
-      "import": "./dist/vue3-tailwind-tabs.es.js",
-      "require": "./dist/vue3-tailwind-tabs.umd.js"
+      "require": "./dist/vue3-tailwind-tabs.cjs",
+      "import": "./dist/vue3-tailwind-tabs.mjs"
     },
     "./dist/build.css": {
-      "import": "./dist/build.css",
-      "require": "./dist/build.css"
+      "require": "./dist/build.css",
+      "import": "./dist/build.css"
     }
   },
+  "main": "./dist/vue3-tailwind-tabs.cjs",
+  "module": "./dist/vue3-tailwind-tabs.mjs",
   "types": "./dist/components/build.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build && vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
-    "preserve": "vite build",
-    "serve": "vite preview --port 5050",
-    "typecheck": "vue-tsc --noEmit",
     "preview": "vite preview",
-    "test": "exit 0"
+    "build-only": "vite build",
+    "type-check": "vue-tsc --noEmit",
+    "release": "pnpm build && bumpp --commit --push --tag && pnpm publish",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "lint:fix": "nr lint --fix"
   },
   "peerDependencies": {
     "vue": "^3.2.47"
@@ -54,15 +55,29 @@
     "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.39.8",
     "@iconify/vue": "^4.1.1",
     "@types/node": "^20.4.1",
     "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.14",
+    "bumpp": "^9.1.1",
+    "eslint": "8.45.0",
+    "lint-staged": "^13.2.3",
     "postcss": "^8.4.25",
+    "simple-git-hooks": "^2.9.0",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.1.6",
+    "unplugin-vue-components": "^0.25.1",
     "vite": "^4.4.2",
     "vite-plugin-dts": "^3.1.1",
     "vue-tsc": "^1.8.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md}": [
+      "pnpm lint:fix"
+    ]
   }
 }
