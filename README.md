@@ -30,7 +30,7 @@ npm install vue3-tailwind-tabs
 
 - [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) lets you auto import components on demand, meaning you don't have to write any import statements.
 
-- 1. Install unplugin-vue-components by running one of the commands below:
+1. Install unplugin-vue-components by running one of the commands below:
 
 ```bash
 
@@ -46,7 +46,7 @@ npm i -D unplugin-vue-components
 
 ```
 
-- 2. Add the following in your `vite.config.ts` file: 
+2. Add the following in your `vite.config.ts` file: 
 
 ```ts
 // other imports
