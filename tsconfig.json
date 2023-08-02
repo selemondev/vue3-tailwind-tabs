@@ -19,5 +19,5 @@
     "outDir": "dist",
     "declaration": true
   },
-  "include": ["vite.config.*", "env.d.ts", "src/**/*", "src/**/*.vue"]
+  "include": ["vite.config.*", "env.d.ts", "src/**/*", "src/**/*.vue", "src/**/*.ts"]
 }

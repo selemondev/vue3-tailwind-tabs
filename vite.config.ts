@@ -1,34 +1,35 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import { resolve } from "path";
+import { resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
-import { fileURLToPath } from "url";
+
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
     cssCodeSplit: true,
     lib: {
       entry: resolve(__dirname, './src/components/build.ts'),
-      name: "vue3-tailwind-tabs",
-      formats: ["es", "cjs", "umd"],
-      fileName: (format) => `vue3-tailwind-tabs.${format}.js`,
+      formats: ['es', 'cjs'],
+      name: 'vue3-tailwind-tabs',
+      fileName: format => format === 'cjs' ? 'vue3-tailwind-tabs.cjs' : 'vue3-tailwind-tabs.mjs',
     },
     rollupOptions: {
-      external: ["vue"],
+      external: ['vue'],
       output: {
         globals: {
-          vue: "Vue",
+          vue: 'Vue',
         },
       },
     },
   },
   plugins: [
     vue(),
-    dts()
+    dts(),
   ],
   resolve: {
     alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-});
+})

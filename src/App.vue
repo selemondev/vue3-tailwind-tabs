@@ -1,4 +1,4 @@
-<script setup lang='ts'>
+<!-- <script setup lang='ts'>
 import { TabOutline, TabsContentOutline, TabsWrapperOutline, TabGroupOutline } from "./components/VueTailwindOutlineTabs";
 import { TabFloatGroup, TabsFloatContent, TabsFloatWrapper, TabFloat } from "./components/VueTailwindFloatTabs";
 import { ref } from "vue";
@@ -162,4 +162,11 @@ const clickTab = (name: string) => {
       </main>
     </div>
   </div>
+</template> -->
+<script setup lang='ts'>
+
+</script>
+
+<template>
+  <div />
 </template>

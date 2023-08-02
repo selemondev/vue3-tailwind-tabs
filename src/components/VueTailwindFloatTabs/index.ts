@@ -1,10 +1,11 @@
-import TabFloat from "./TabFloat.vue";
-import TabFloatGroup from "./TabFloatGroup.vue";
-import TabsFloatContent from "./TabsFloatContent.vue";
-import TabsFloatWrapper from "./TabsFloatWrapper.vue";
+import VTabFloat from './TabFloat.vue'
+import VTabFloatGroup from './TabFloatGroup.vue'
+import VTabsFloatContent from './TabsFloatContent.vue'
+import VTabsFloatWrapper from './TabsFloatWrapper.vue'
+
 export {
-    TabFloat,
-    TabFloatGroup,
-    TabsFloatContent,
-    TabsFloatWrapper
+  VTabFloat,
+  VTabFloatGroup,
+  VTabsFloatContent,
+  VTabsFloatWrapper,
 }

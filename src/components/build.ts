@@ -1,13 +1,15 @@
-import "../assets/css/tailwind.css";
-import { TabsContentOutline, TabGroupOutline, TabsWrapperOutline, TabOutline } from "./VueTailwindOutlineTabs/index";
-import { TabsFloatContent, TabsFloatWrapper, TabFloatGroup, TabFloat } from "./VueTailwindFloatTabs/index";
+import '../assets/css/tailwind.css'
+import { VTabGroupOutline, VTabOutline, VTabsContentOutline, VTabsWrapperOutline } from './VueTailwindOutlineTabs/index'
+import { VTabFloat, VTabFloatGroup, VTabsFloatContent, VTabsFloatWrapper } from './VueTailwindFloatTabs/index'
+
+export { TabsUIComponentResolver } from '@/componentResolver'
 export {
-    TabsContentOutline,
-    TabGroupOutline,
-    TabsWrapperOutline,
-    TabOutline,
-    TabsFloatContent,
-    TabsFloatWrapper,
-    TabFloatGroup,
-    TabFloat
+  VTabsContentOutline,
+  VTabGroupOutline,
+  VTabsWrapperOutline,
+  VTabOutline,
+  VTabsFloatContent,
+  VTabsFloatWrapper,
+  VTabFloatGroup,
+  VTabFloat,
 }
