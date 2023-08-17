@@ -13,12 +13,20 @@ const props = withDefaults(defineProps<Props>(), {
   titleColor: 'text-black',
   barColor: 'border-green-500',
 })
+
+const emit = defineEmits<{
+  (event: 'onClick'): void
+}>()
+
+function handleClick() {
+  return emit('onClick')
+}
 </script>
 
 <template>
   <div class="px-1">
     <div class="pr-10">
-      <li class="cursor-pointer flex items-center space-x-1" @click="$emit('onClick')">
+      <li class="cursor-pointer flex items-center space-x-1" @click="handleClick()">
         <slot name="icon" />
         <div class="py-2 w-20 sm:w-auto">
           <span

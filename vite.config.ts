@@ -10,9 +10,9 @@ export default defineConfig({
     cssCodeSplit: true,
     lib: {
       entry: resolve(__dirname, './src/components/build.ts'),
-      formats: ['es', 'cjs'],
+      formats: ['es', 'cjs', 'umd'],
       name: 'vue3-tailwind-tabs',
-      fileName: format => format === 'cjs' ? 'vue3-tailwind-tabs.cjs' : 'vue3-tailwind-tabs.mjs',
+      fileName: 'vue3-tailwind-tabs',
     },
     rollupOptions: {
       external: ['vue'],
