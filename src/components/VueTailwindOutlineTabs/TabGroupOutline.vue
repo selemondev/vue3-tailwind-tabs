@@ -1,5 +1,6 @@
 <script setup lang='ts'>
 const props = withDefaults(defineProps<{
+  // eslint-disable-next-line vue/prop-name-casing
   TabGroupWidth?: string | number
 }>(), {
   TabGroupWidth: 'w-72 sm:w-[768px]',

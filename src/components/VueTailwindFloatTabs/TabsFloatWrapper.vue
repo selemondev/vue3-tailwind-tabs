@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/prop-name-casing -->
 <script lang="ts" setup>
 import classNames from 'classnames'
 import { computed } from 'vue'

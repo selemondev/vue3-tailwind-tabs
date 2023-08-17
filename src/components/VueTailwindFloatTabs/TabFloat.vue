@@ -13,6 +13,14 @@ const props = withDefaults(defineProps<Props>(), {
   floatTitleSize: 'text-base',
   floatTitleColor: 'text-black',
 })
+
+const emit = defineEmits<{
+  (event: 'onClick'): void
+}>()
+
+function handleClick() {
+  return emit('onClick')
+}
 </script>
 
 <template>
@@ -20,7 +28,7 @@ const props = withDefaults(defineProps<Props>(), {
     <div class="px-4">
       <li
         class="cursor-pointer h-12 rounded-lg flex justify-center items-center px-4 space-x-1"
-        @click="$emit('onClick')"
+        @click="handleClick()"
       >
         <slot name="icon" />
         <div class="py-2 w-12 sm:w-auto">
