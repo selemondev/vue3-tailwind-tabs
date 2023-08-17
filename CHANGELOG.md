@@ -1,3 +1,15 @@
+## v0.1.16
+
+[compare changes](https://github.com/selemondev/vue3-tailwind-tabs/compare/v0.1.15...v0.1.16)
+
+### 🩹 Fixes
+
+- **app:** Eslint format errors ([6ecacd7](https://github.com/selemondev/vue3-tailwind-tabs/commit/6ecacd7))
+
+### ❤️  Contributors
+
+- Selemondev <selemondev@Selemondevs-MacBook-Pro.local>
+
 ## v0.1.15
 
 [compare changes](https://github.com/selemondev/vue3-tailwind-tabs/compare/v0.1.12...v0.1.15)
