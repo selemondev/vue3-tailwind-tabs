@@ -1,3 +1,15 @@
+## v0.1.19
+
+[compare changes](https://github.com/selemondev/vue3-tailwind-tabs/compare/v0.1.18...v0.1.19)
+
+### 🏡 Chore
+
+- **release:** V0.1.18 ([408152f](https://github.com/selemondev/vue3-tailwind-tabs/commit/408152f))
+
+### ❤️  Contributors
+
+- Selemondev <selemondev@Selemondevs-MacBook-Pro.local>
+
 ## v0.1.18
 
 [compare changes](https://github.com/selemondev/vue3-tailwind-tabs/compare/v0.1.18...v0.1.18)

@@ -1,7 +1,7 @@
 {
   "name": "vue3-tailwind-tabs",
   "type": "module",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "private": false,
   "description": "A collection of Vue 3 components for creating tabs with Tailwind CSS.",
   "author": "Selemon Brahanu",
