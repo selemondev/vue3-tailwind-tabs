@@ -12,7 +12,7 @@ export default defineConfig({
       entry: resolve(__dirname, './src/components/build.ts'),
       formats: ['es', 'cjs', 'umd'],
       name: 'vue3-tailwind-tabs',
-      fileName: 'vue3-tailwind-tabs',
+      fileName: format => `vue3-tailwind-tabs.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],
