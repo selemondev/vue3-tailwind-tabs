@@ -1,3 +1,7 @@
+## v0.1.18
+
+[compare changes](https://github.com/selemondev/vue3-tailwind-tabs/compare/v0.1.18...v0.1.18)
+
 ## v0.1.16
 
 [compare changes](https://github.com/selemondev/vue3-tailwind-tabs/compare/v0.1.15...v0.1.16)
