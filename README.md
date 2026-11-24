@@ -330,5 +330,6 @@ Congratulations 🎉. You are now using `vue3-tailwind-tabs` with Vue 3.
 
 Contributions are welcome and encouraged! If you have any ideas or suggestions for new features, or if you encounter any bugs or issues, please open an issue or submit a pull request on the GitHub repository.
 
+## Author
 
-
+[Selemon Brahanu](https://selemon.dev)
